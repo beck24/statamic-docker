@@ -1,61 +1,33 @@
 ## Installation
 
-Standard Laravel installation
+1. Copy `.env.example` to `.env` set any required values.  For local dev with stock Statamic no changes are required
 
-Make sure the following directories are writable by the server.
+2. Optional: Copy your private ssh key to `.docker/config/ssh/id_rsa` - this will be installed into the container.  Useful for git usage in the container during development.
 
-`/storage/`
-`/resources/users/`
-`/content/`
+3. Build the container
 
+        docker compose up -d --build
 
-## Development
+4. Log into the webserver container:
 
-Copy `.env.example` to `.env` set any required values
+        docker exec -it statamic_webserver bash
 
-Copy your private key to `.docker/config/ssh/id_rsa` - this will be installed into the container
+    Files are located at `/var/www/html/`
 
-Build the container
+5. Install Dependencies and instantiate Laravel
 
-    docker compose up -d --build
+        composer install
 
-Use VSCode with Remote Explorer to edit the files inside the container.  Use git to commit/push/pull new code inside of the container.
+        php artisan key:generate
+        php artisan storage:link
+        php artisan cache:clear
 
-Log into the webserver container:
+    Make sure directories are writable (Note: don't use 777 on prod, dev only for simplicity)
 
-    docker exec -it statamic_webserver bash
+        chmod -R 777 storage/ resources/users/ content/
 
-Files are located at `/var/www/html/`
+6. Ccreate a new user
 
-Install Dependencies and instantiate Laravel
+        php please make:user
 
-    composer install
-
-    php artisan key:generate
-    php artisan storage:link
-    php artisan cache:clear
-
-Make sure directories are writable (Note: don't use 777 on prod, dev only for simplicity)
-
-    chmod -R 777 storage/ resources/users/ content/
-
-If you need to create a new user at this point
-
-    php please make:user
-
-Build js/css - this is configured to use tailwindcss and will strip out unused styles from the prod css
-
-    npm install
-
-    npm run watch (or npm run dev, or npm run prod)
-
-Log into the control panel at http://localhost/cp
-
-## Docker Containers
-
-- Webserver - contains the laravel/statamic files
-
-Log into the container
-
-    docker exec -it statamic_webserver bash
-
+7. Log into the control panel at http://localhost/cp
