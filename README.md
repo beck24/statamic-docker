@@ -22,12 +22,12 @@
         php artisan storage:link
         php artisan cache:clear
 
-    Make sure directories are writable (Note: don't use 777 on prod, dev only for simplicity)
-
-        chmod -R 777 storage/ resources/users/ content/
-
-6. Ccreate a new user
+6. Ccreate a new user, make them super user when asked
 
         php please make:user
 
-7. Log into the control panel at http://localhost/cp
+7. Make sure directories are writable (Note: don't use 777 on prod, dev only for simplicity)
+
+        chmod -R 777 storage/ resources/users/ content/
+
+8. Log into the control panel at http://localhost/cp
