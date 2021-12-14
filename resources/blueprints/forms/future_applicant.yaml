@@ -1,0 +1,73 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: first_name
+        field:
+          input_type: text
+          antlers: false
+          display: 'First Name'
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+            - string
+          placeholder: 'First Name'
+      -
+        handle: last_name
+        field:
+          input_type: text
+          antlers: false
+          display: 'Last Name'
+          type: text
+          icon: text
+          listable: true
+          validate:
+            - required
+            - string
+          placeholder: 'Last Name'
+      -
+        handle: email
+        field:
+          input_type: text
+          antlers: false
+          display: Email
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+            - email
+          placeholder: Email
+      -
+        handle: phone
+        field:
+          input_type: text
+          antlers: false
+          display: Phone
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+            - string
+          placeholder: Phone
+      -
+        handle: positions
+        field:
+          inline: false
+          options:
+            chemistry: Chemistry
+            engineering: Engineering
+            finance: Finance/Accounting
+            hr: 'Human Resources'
+            operations: Operations/Maintenance
+            procurement: Procurement
+            supply: Commercial/Supply Chain
+          display: 'Positions you may be interested in:'
+          type: checkboxes
+          icon: checkboxes
+          instructions: '(Choose all that apply)'
+          listable: true

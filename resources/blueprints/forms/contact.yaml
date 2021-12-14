@@ -1,0 +1,70 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: send_to
+        field:
+          input_type: text
+          antlers: false
+          display: 'Send To'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: name
+        field:
+          placeholder: Name
+          input_type: text
+          antlers: false
+          display: Name
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+            - 'min:2'
+      -
+        handle: company
+        field:
+          placeholder: Company
+          input_type: text
+          antlers: false
+          display: Company
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: phone
+        field:
+          placeholder: Phone
+          input_type: text
+          antlers: false
+          display: Phone
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: email
+        field:
+          placeholder: Email
+          input_type: email
+          antlers: false
+          display: Email
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+            - email
+      -
+        handle: general_message
+        field:
+          placeholder: Message
+          antlers: false
+          display: Message
+          type: textarea
+          icon: textarea
+          listable: hidden
+          validate:
+            - required

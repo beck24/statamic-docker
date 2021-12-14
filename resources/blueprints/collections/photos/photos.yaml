@@ -1,0 +1,36 @@
+title: Photos
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: image
+        field:
+          mode: grid
+          container: images
+          restrict: true
+          allow_uploads: true
+          max_files: 1
+          display: Image
+          type: assets
+          icon: assets
+          listable: hidden
+          folder: images/photos
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required

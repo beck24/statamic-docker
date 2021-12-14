@@ -1,0 +1,40 @@
+title: 'Home Page'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        import: content_sections
+      -
+        import: videos
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+  seo:
+    display: SEO
+    fields:
+      -
+        handle: meta_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Page Title'
+          type: text
+          icon: text
+          instructions: 'Shown as the meta title tag'
+          listable: hidden

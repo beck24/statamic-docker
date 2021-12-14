@@ -1,0 +1,17 @@
+name: 'Matthew Beckett'
+super: true
+id: 120b4687-f3ee-4f06-9359-1d21a830b64a
+password_hash: $2y$10$pQjYKBIYqOI/qJ5eo9wDzuwcfl9Nn.VOkaNE0a3ofiWOxggl47VWy
+preferences:
+  assets:
+    documents:
+      mode: table
+    images:
+      mode: table
+  collections:
+    news:
+      columns:
+        - title
+        - date
+    pages:
+      per_page: 100

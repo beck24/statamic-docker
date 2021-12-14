@@ -1,0 +1,43 @@
+tree:
+  -
+    id: 4a97bba8-b955-4ccb-823a-0f440585955f
+    title: 'Find a Counselor'
+    url: 'javascript:void(0);'
+    children:
+      -
+        id: 43045ee6-f040-4dd3-815d-31d36bbf3494
+        title: 'Link 1'
+        url: /test
+      -
+        id: 87f76082-7894-43f1-93e0-7d67eb390e1c
+        title: 'Link 2'
+        url: /test
+  -
+    id: 8e03ff6e-ac1b-4a04-bb73-e1f6eab87dde
+    title: 'Help For Family Members'
+    url: 'javascript:void(0);'
+    children:
+      -
+        id: 801a832d-9033-4e88-b455-b84376e4e184
+        title: 'Link 1'
+        url: /test2
+      -
+        id: 785247c4-5f98-4eb9-b056-2e99ff20b62d
+        title: 'Link 2'
+        url: /test2
+  -
+    id: 537cefe7-625c-405e-b216-3b9f86f06ece
+    title: 'Get Educated'
+    children:
+      -
+        id: 320f2bac-057b-421c-b5cb-5079faf5c8d9
+        title: 'Manage Your Gambling'
+        url: /
+      -
+        id: 70824792-76c6-47ab-b8a7-99f09b7f8572
+        title: 'Learn More About Problem Gambling'
+        url: /
+      -
+        id: 8b14586d-8057-42cd-a664-d39260a52992
+        title: 'Professional Resources'
+        url: /resources

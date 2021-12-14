@@ -1,0 +1,55 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: site_name
+        field:
+          type: text
+      -
+        handle: address
+        field:
+          antlers: false
+          display: Address
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+      -
+        handle: phone
+        field:
+          input_type: text
+          antlers: false
+          display: 'Phone Number'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: phone_toll_free
+        field:
+          input_type: text
+          antlers: false
+          display: 'Phone (Toll-Free)'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+  analytics:
+    display: Analytics
+    fields:
+      -
+        handle: google_tag_manager_id
+        field:
+          input_type: text
+          antlers: false
+          display: 'Google Tag Manager ID'
+          type: text
+          icon: text
+          instructions: 'The gtag ID - usually starts with `UA-`'
+          listable: hidden
+  seo:
+    display: SEO
+    fields:
+      -
+        import: seo

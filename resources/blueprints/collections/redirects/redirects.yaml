@@ -1,0 +1,35 @@
+title: Redirects
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: target_url
+        field:
+          input_type: url
+          antlers: false
+          display: 'Target URL'
+          type: text
+          icon: text
+          instructions: 'The URL to redirect to, must start with http:// or https://'
+          listable: hidden
+          validate:
+            - url
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required

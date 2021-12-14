@@ -1,0 +1,94 @@
+title: Pages
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: header_image_desktop
+        field:
+          mode: grid
+          container: images
+          folder: images
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Header Image Desktop'
+          type: assets
+          icon: assets
+          instructions: 'Upload an image for the page header.  Note that many page templates do not have header images in which case it won''t be shown.  Image format `jpg` or `png`.  Width `1920px` with the smallest file size possible.'
+          listable: hidden
+          validate:
+            - image
+            - 'mimes:jpg,png'
+      -
+        handle: header_image_mobile
+        field:
+          mode: grid
+          container: images
+          folder: images
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Header Image Mobile'
+          type: assets
+          icon: assets
+          instructions: 'Upload an image for the page header.  Note that many page templates do not have header images in which case it won''t be shown.  Image format `jpg` or `png`.  Width `800px` with the smallest file size possible.'
+          listable: hidden
+          validate:
+            - image
+            - 'mimes:jpg,png'
+      -
+        import: content_sections
+      -
+        import: videos
+      -
+        handle: logos
+        field:
+          mode: grid
+          container: images
+          restrict: false
+          allow_uploads: true
+          display: Logos
+          type: assets
+          icon: assets
+          listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+      -
+        handle: template
+        field:
+          hide_partials: true
+          display: Template
+          type: template
+          icon: template
+          listable: hidden
+  seo:
+    display: SEO
+    fields:
+      -
+        import: seo

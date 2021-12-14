@@ -1,0 +1,62 @@
+title: Videos
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: description
+        field:
+          antlers: false
+          display: Description
+          type: textarea
+          icon: textarea
+          instructions: 'What is the video about?'
+          listable: hidden
+      -
+        handle: video_url
+        field:
+          input_type: url
+          antlers: false
+          display: 'Video URL'
+          type: text
+          icon: text
+          instructions: 'Youtube or Vimeo URL of the video'
+          listable: hidden
+      -
+        handle: download_url
+        field:
+          input_type: url
+          antlers: false
+          display: 'Download URL'
+          type: text
+          icon: text
+          instructions: 'URL to the direct video download'
+          listable: hidden
+      -
+        handle: thumbnail
+        field:
+          input_type: url
+          antlers: false
+          display: Thumbnail
+          type: text
+          icon: text
+          instructions: 'URL to the video thumbnail'
+          listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
