@@ -23,7 +23,7 @@ Use VSCode with Remote Explorer to edit the files inside the container.  Use git
 
 Log into the webserver container:
 
-    docker exec -it nebraska_gap_webserver bash
+    docker exec -it statamic_webserver bash
 
 Files are located at `/var/www/html/`
 
@@ -57,5 +57,5 @@ Log into the control panel at http://localhost/cp
 
 Log into the container
 
-    docker exec -it nebraska_gap_webserver bash
+    docker exec -it statamic_webserver bash
 
